@@ -58,7 +58,7 @@ public class Bank {
         do {
             depositAmount = scanner.nextDouble();
             if (depositAmount < 0){
-                System.err.println("Enter a positive number");
+                System.err.print("Enter a positive number: ");
             }
         }while (depositAmount < 0);
         totalDespositAmount += depositAmount;
@@ -77,22 +77,4 @@ public class Bank {
         System.out.println("Total Amount of Withdrawal: "+totalWithdrawalAmount);
 
     }
-    /*
-    account holder name -- setName
-    accountType -- you should not be able to change
-    accountNumber -- \get it but not change it
-    accountBalance -- cannot be modified directly
-
-    methods--
-    withdraw() --- balance = 100 - 10, balance 90
-    deposit() --- balance = 90 - 200, balance 290
-    checkBalance() -- balance 280
-    statements() -- print whatever
-
-    --------
-
-    Inheritance -- ScotiaBank etc
-
-
-     */
 }
