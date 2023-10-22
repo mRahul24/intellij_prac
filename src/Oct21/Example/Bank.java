@@ -40,9 +40,12 @@ public class Bank {
         do {
             withdrawalAmount = scanner.nextDouble();
             if (withdrawalAmount < 0){
-                System.err.println("Enter a positive number");
+                System.err.print("Enter a positive number: ");
             }
-        }while (withdrawalAmount < 0);
+            if(withdrawalAmount>accountBalance){
+                System.err.print("Entered amount is more than the balance! \nEnter again: ");
+            }
+        }while (withdrawalAmount < 0 || withdrawalAmount>accountBalance);
         totalWithdrawalAmount += withdrawalAmount;
         accountBalance -= withdrawalAmount;
         System.out.print("Total Balance After Withdraw: ");
